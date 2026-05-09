@@ -1,16 +1,7 @@
-// src/types.ts
+// postcss.config.js
+import tailwindcss from "@tailwindcss/postcss";
+import autoprefixer from "autoprefixer";
 
-export interface Suggestion {
-  courseCode: string;
-  courseName: string;
-  grade: number;
-  reason: string;
-}
-
-export interface ScholarshipData {
-  gpa: number;
-  status: "Safe" | "Warning" | "Not Qualified";
-  message: string;
-  badgeColor: "green" | "orange" | "red";
-  suggestions: Suggestion[];
-}
+export default {
+  plugins: [tailwindcss, autoprefixer],
+};
